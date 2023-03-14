@@ -41,8 +41,6 @@ export default {
   margin: 60px auto;
   border: 1px solid green;
   border-radius: 5px;
-  max-width: 550px;
-  width: 100%;
   padding: 20px 20px;
 }
 #app {
