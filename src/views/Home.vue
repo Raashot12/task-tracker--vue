@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     async addTask(newTask) {
-      const res = await fetch("api/tasks", {
+      const res = await fetch("https://json-serverbackend.vercel.app/tasks", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -38,7 +38,7 @@ export default {
     },
     async deleteTask(id) {
       if (confirm("Are you sure")) {
-        const res = await fetch(`api/tasks/${id}`, {
+        const res = await fetch(`https://json-serverbackend.vercel.app/tasks/${id}`, {
           method: "DELETE",
         })
         res.status === 200

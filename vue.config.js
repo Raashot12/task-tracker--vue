@@ -7,7 +7,7 @@ module.exports = {
     port: 5000,
     proxy: {
       '^/api': {
-        target: 'https://task-tracker-vue-theta.vercel.app',
+        target: 'http://localhost:5000',
         changeOrigin: true,
         loglevel: 'debug',
         pathRewrite: { '^/api': '/' }
