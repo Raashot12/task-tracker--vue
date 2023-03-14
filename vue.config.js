@@ -4,15 +4,14 @@ module.exports = defineConfig({
 })
 module.exports = {
   devServer: {
-    port: 5000,
     proxy: {
       '^/api': {
         target: 'http://localhost:5000',
         changeOrigin: true,
-        loglevel: 'debug',
-        pathRewrite: { '^/api': '/' }
-      }
-    }
+        logLevel: 'debug',
+        pathRewrite: { '^/api': '/' },
+      },
+    },
   },
   configureWebpack: {
     output: {

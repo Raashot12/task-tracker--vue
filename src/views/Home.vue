@@ -50,7 +50,7 @@ export default {
       const taskToggle = await this.fetchTask(id)
       const updateTask = {...taskToggle, reminder: !taskToggle.reminder}
 
-      const res = await fetch(`api/tasks/${id}`, {
+      const res = await fetch(`https://json-serverbackend.vercel.app/tasks/${id}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json",
@@ -64,12 +64,12 @@ export default {
     },
 
     async fetchTasks() {
-      const res = await fetch("api/tasks")
+      const res = await fetch("https://json-serverbackend.vercel.app/tasks")
       const data = await res.json()
       return data
     },
     async fetchTask(id) {
-      const res = await fetch(`api/tasks/${id}`)
+      const res = await fetch(`https://json-serverbackend.vercel.app/tasks/${id}`)
       const data = await res.json()
       return data
     },
